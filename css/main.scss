@@ -1,0 +1,44 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+h1,
+strong,
+p {
+    margin-left: 1rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 1rem;
+    cursor: pointer;
+
+    .card {
+
+
+        img {
+
+            transition: transform 1s;
+
+            &:hover {
+                transform: translateY(-10px);
+            }
+
+            width: 100%;
+        }
+
+        .info {
+            padding: 1rem;
+        }
+    }
+}
+
+.dd-selected {
+    color: black;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script src="https://kit.fontawesome.com/04ffca717e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <img src="images/utility-logo.png" alt="">
+        <hr>
+    </header>
+
+
+
+    <main>
+        <div class="card">
+            <div class="slider-container">
+                <i class="fas fa-chevron-left prev"></i>
+                <i class="fas fa-chevron-right next"></i>
+            </div>
+
+            <div class="slider">
+                <div class="greychair"><img src="images/greychair-main.png" alt=""></div>
+                <div class="pinkchair"><img src="images/pinkchair-main.png" alt=""></div>
+            </div>
+        </div>
+
+
+
+        <!--Purchase section-->
+
+        <div class="info">
+            <h1 id="chair-label">
+                Hay About A Lounge Chair - Low <br />
+                AAL82
+            </h1>
+
+            <div class="chair-title">
+                From £779.00
+            </div>
+
+            <p> <i class="fas fa-check-circle fa-check-circle-green"></i>Made To Order - 6 - 8 Weeks</p>
+
+            <hr class="order">
+
+            <h1 class="item-title">Fabric</h1>
+            <div class="form-group">
+                <select id="selection">
+                    <option value="" class="select-option">Select Your Fabric</option>
+                    <option value=30 class="option-1" data-imagesrc="images/steelcut.png" data-description="+ £30.00"
+                        id="item-val">
+                        <p class="item-name">Steelcut Trio<p>
+                    </option>
+                </select>
+            </div>
+
+            <h1>Colour</h1>
+            <select id="selection2">
+                <option value=0 class="select-option">
+                    Select Your Colour</option>
+                <option value=0 data-imagesrc="images/salmon.png" data-description="" class="add-item" id="item-val">
+                    SCT526</option>
+            </select>
+
+            <h1>Leg Finish</h1>
+            <select id="selection3">
+                <option value="0" class="select-option">
+                    Select Your Leg Finish</option>
+                <option value=0 data-imagesrc="images/lgfinish.png" data-description="" class="add-item" id="item-val">
+                    Matt Lacquered Oak</option>
+            </select>
+
+            <h1>Optional Seat Cushion</h1>
+            <select id="selection4">
+                <option value="0" class="select-option">
+                    Select Your Cushion</option>
+                <option value=109 data-imagesrc="images/Shape.png" data-description="+ £109.00" class="add-item"
+                    id="item-val">
+                    In same fabric, Group 4</option>
+            </select>
+            <hr class="order">
+
+
+            <div class="cart-items" id="item-name"></div>
+            <div class="cart-items" id="item-fabric"></div>
+            <div class="cart-items item-color" id="item-color"></div>
+            <div class="cart-items item-lg" id="item-lg"></div>
+            <div class="cart-items item-cushion" id="item-cushion"></div>
+
+            <section class="container content-section">
+                <div class="cart-row">
+
+
+                    <h1>Quantity</h1>
+
+                    <input type="number" class="cart-quantity cart-header cart-column" id="quantity" name="quantity"
+                        value="0">
+                    </input>
+
+
+                    <div class="arrows">
+                        <button><i class="fas fa-chevron-up arrow-up" onclick="increaseValue();"></i></button>
+                        <button><i class="fas fa-chevron-down arrow-down" onclick="decreaseValue();"></i></button>
+                    </div>
+
+
+                    <label class="cart-total-title cart-total">Total £</label>
+
+                    <output id="total" class="cart-total-price add-item" name="total-out" value="0">0</output>
+                </div>
+                <div class="purchase-btn">
+                    <button class="btn btn-primary btn-purchase" type="button">Add To Basket</button>
+                    <button class="heart"><i class="fas fa-heart"></i></button>
+                </div>
+                <div class="company-info">
+                    <p> <i class="fas fa-check-circle black-dot"></i>0% finance available, find out more</p>
+                    <p><i class="fas fa-check-circle black-dot "></i>Free UK mainland delivery</p>
+                    <p><i class="fas fa-check-circle black-dot"></i>100% Original designs only</p>
+                    <p><i class="fas fa-check-circle black-dot"></i>Price match. Found it cheaper? contact us</p>
+                    <p><i class="fas fa-check-circle black-dot"></i>Trade Discount Available</p>
+                </div>
+
+                <div class="social">
+                    <p>Share online
+                        <i class="fab fa-twitter social-icon"></i>
+                        <i class="fab fa-facebook-f social-icon"></i>
+                        <i class="fab fa-pinterest social-icon"></i>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="thumbnail">
+        <div class="chair"><img class="pink-img active colours" src="images/greychair-small.png" alt=""> </div>
+        <div class="chair"><img class="grey-img colours" src="images/pinkchair-small.png" alt=""></div>
+    </div>
+
+
+
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!--Slick carousel-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!--Item selector-->
+    <script type="text/javascript" src="https://cdn.rawgit.com/prashantchaudhary/ddslick/master/jquery.ddslick.min.js">
+    </script>
+
+    <!--Custom Script-->
+    <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

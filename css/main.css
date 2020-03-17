@@ -1,0 +1,514 @@
+body,
+html {
+  height: 100%;
+  font-family: "proxima nova";
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 10px 0px 10px;
+  width: 100%;
+}
+
+h1,
+strong,
+p {
+  margin-left: 2rem;
+}
+
+h1 {
+  font-size: 15px;
+}
+
+
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1rem;
+  cursor: pointer;
+}
+
+main .card img {
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  width: 100%;
+}
+
+main .card img:hover {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+main .card .info {
+  padding: 1rem;
+}
+
+
+.chair-title {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.dd-pointer {
+  display: none;
+}
+
+
+.dd-container {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  font-size: 15px;
+
+}
+
+.dd-selected-text {
+  margin-left: 1rem;
+  font-weight: lighter;
+  color: grey;
+  line-height: 25px !important;
+  display: inline-block;
+
+}
+
+.dd-selected-description {
+  padding-left: 20px;
+}
+
+.dd-option-text {
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+.dd-option-description {
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+.order {
+  margin-left: 2rem;
+  width: 64%;
+}
+
+.slider {
+  width: 50%;
+  height: 54.4%;
+  position: relative;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-container {
+  position: absolute;
+  width: 100%;
+  top: 15%;
+}
+
+.next {
+  position: relative;
+  left: 57%;
+  color: grey;
+}
+
+.prev {
+  color: grey;
+  margin-left: 20%;
+}
+
+.arrows {
+
+  display: inline-block;
+
+
+}
+
+.arrows button {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  top: 10px;
+
+
+}
+
+
+
+.fa-check-circle-green {
+  color: green;
+  padding-right: 8px;
+}
+
+.cart-quantity {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 2rem;
+
+}
+
+.btn {
+  width: 50%;
+  padding: 15px;
+  font-size: 12.8px;
+  margin-left: 2rem;
+  background-color: #250858;
+  color: white;
+  cursor: pointer;
+}
+
+.heart {
+  padding: 15px;
+}
+
+.cart-row {
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  font-size: 13px;
+
+}
+
+.cart-total-price {
+  font-weight: bold;
+  color: black;
+}
+
+.thumbnail {
+  position: absolute;
+  top: 55%;
+  left: 16.5%;
+  display: flex;
+  cursor: pointer;
+}
+
+.company-info {
+  border: 3px dotted grey;
+  outline: 3px dotted grey;
+  width: 60%;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  padding: 10px;
+}
+
+.black-dot {
+  padding-right: 8px;
+}
+
+.colours {
+  margin: 5px;
+}
+
+
+.social-icon {
+  color: grey;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: #250858;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+
+#item-name {
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+
+}
+
+#item-fabric {
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+
+}
+
+#item-color {
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#item-lg {
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+#item-cushion {
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+
+
+@media screen and (device-width: 360px) and (device-height: 640px) {
+
+  .slider-container {
+    position: absolute;
+    width: 100%;
+    top: 40%;
+
+  }
+
+  .slider {
+    width: 75%;
+    height: 54.4%;
+    position: relative;
+    right: 5%;
+  }
+
+
+  .thumbnail {
+    display: none;
+  }
+
+  .prev {
+    margin-left: 12px;
+  }
+
+  .next {
+    position: relative;
+    left: 78%;
+    color: grey;
+  }
+
+
+
+}
+
+@media screen and (device-width: 320px) and (device-height: 568px) {
+
+  .slider-container {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+  }
+
+  .slider {
+    width: 50%;
+    height: 54.4%;
+    position: relative;
+    right: 11%;
+  }
+
+  .thumbnail {
+    display: none;
+  }
+
+  .prev {
+    margin-left: 40px;
+  }
+
+  .next {
+    position: relative;
+    left: 53%;
+    color: grey;
+  }
+
+
+}
+
+@media screen and (device-width: 375px) and (device-height: 667px) {
+
+  .slider-container {
+    position: absolute;
+    width: 100%;
+    top: 45%;
+
+
+  }
+
+  .slider {
+    width: 50%;
+    height: 54.4%;
+    position: relative;
+    right: 5%;
+  }
+
+  .thumbnail {
+    display: none;
+  }
+
+  .next {
+    position: relative;
+    color: grey;
+  }
+
+  .prev {
+    margin-left: 50px;
+  }
+}
+
+
+@media screen and (device-width: 411px) and (device-height: 823px) {
+
+  header {
+    width: 90%;
+  }
+
+  hr {
+    width: 150%;
+  }
+
+  .thumbnail {
+    display: none;
+  }
+
+  .slider {
+    right: 5%;
+  }
+
+  .slider-container {
+    top: 45%;
+    width: 100%;
+  }
+
+  .next {
+    position: relative;
+    color: grey;
+
+  }
+
+  .prev {
+    margin-left: 55px;
+  }
+}
+
+@media screen and (device-width: 411px) and (device-height: 731px) {
+
+  .slider-container {
+
+    top: 40%;
+    width: 100%;
+  }
+
+  .thumbnail {
+    display: none;
+  }
+
+  .prev {
+    margin-left: 15%;
+  }
+
+  .next {
+    margin-left: 7%;
+  }
+
+}
+
+
+
+@media screen and (device-width: 414px) and (device-height: 736px) {
+
+  .slider-container {
+    width: 80%;
+    top: 40%;
+  }
+
+  .thumbnail {
+    display: none;
+  }
+
+  .next {
+    left: 65%;
+  }
+
+  .slider {
+    width: 50%;
+    height: 54.4%;
+    position: relative;
+    right: 5%;
+  }
+
+  .prev {
+    margin-left: 25px;
+  }
+}
+
+@media screen and (device-width: 375px) and (device-height: 812px) {
+  .thumbnail {
+    display: none;
+  }
+
+  .slider {
+    right: 5%;
+  }
+
+  .slider-container {
+
+    width: 100%;
+    top: 40%;
+  }
+
+  .next {
+    left: 52%;
+  }
+
+  .prev {
+    margin-left: 65px;
+  }
+
+}
+
+@media screen and (device-width: 768px) and (device-height: 1024px) {
+
+  .slider-container {
+    width: 80%;
+    top: 40%;
+  }
+
+  .slider {
+    right: 8%;
+  }
+
+  .next {
+    left: 66%;
+  }
+
+  .prev {
+    margin-left: 30px;
+  }
+
+  header {
+    width: 85%;
+  }
+
+  .thumbnail {
+    display: none;
+  }
+
+
+}
+
+@media screen and (device-width: 1024px) and (device-height: 1366px) {
+
+  .slider-container {
+
+    top: 10%;
+  }
+}
