@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body,
 html {
   height: 100%;
-  font-family: "proxima nova";
+  font-family: "proxima nova", "Roboto";
 }
 
 body {
